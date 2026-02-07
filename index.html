@@ -323,7 +323,7 @@ button {
 #reviewSection div > div {
   padding-left: 0.6rem;
   margin-bottom: 0.25rem;
-  font-size: 0.85rem;
+  font-size: 1.1rem;
 }
 
 #reviewSection strong {
@@ -331,12 +331,13 @@ button {
 }
 
 #reviewSection {
-  background: #ffffff;
-  border: 1px dashed #93c5fd;
+  background: #F0E8E6;
+  color: #0f172a; /* mörk blågrå, lättläst */
+  border: 1px dashed #F0E8E6;
   border-radius: 8px;
   padding: 1.4rem 2rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.8rem;
+  font-size: 1.6rem;
 }
 
 .review-actions {
@@ -1049,6 +1050,15 @@ openLinks.addEventListener("click", e => {
 
 
 </script>
+
+<script>
+  window.addEventListener("load", () => {
+    document.querySelectorAll("input, textarea").forEach(el => {
+      el.value = "";
+    });
+  });
+</script>
+
 
 <div class="review-actions">
   <button id="reviewBtn" class="action-btn">
