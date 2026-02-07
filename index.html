@@ -2,7 +2,8 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8"/>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Mall</title>
   
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -731,7 +732,7 @@ section.serie > fieldset.relations {
   padding: 0.4rem 1.2rem;
 }
 .ff-submenu > li {
-  position: relative;
+  position: relative;<meta name="viewport" content="width=device-width, initial-scale=1">
 }
 
 .ff-submenu > li > span,
@@ -765,7 +766,7 @@ section.serie > fieldset.relations {
 }
 
 .ff-submenu a {
-  text-decoration: underline;
+  text-decoration: underline;<meta name="viewport" content="width=device-width, initial-scale=1">
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
   text-decoration-color: rgba(0,0,0,.35);
@@ -795,7 +796,7 @@ section.serie > fieldset.relations {
 .ff-topbar .ff-submenu li a {
   color: #000000;
   font-weight: 600;
-}
+}<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
@@ -817,7 +818,7 @@ section.serie > fieldset.relations {
    ENHETLIG MENYLOGIK
    ========================= */
 
-/* Bas: all text i undermenyer */
+/* Bas: all text i undermenyer */<meta name="viewport" content="width=device-width, initial-scale=1">
 .ff-topbar .ff-submenu li {
   color: #000;
   font-weight: 600;
@@ -967,12 +968,128 @@ transform: translateY(10px) scale(0.98);
 }
 
 }
+
+/* Grund */
+.ff-menu,
+.ff-submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .ff-menu > li {
+    display: inline-block;
+    position: relative;
+  }
+
+  .ff-submenu {
+    display: none;
+    position: absolute;
+    background-color: #D8EAEB;
+  }
+
+  .ff-menu li:hover > .ff-submenu {
+    display: block;
+  }
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  .ff-menu > li {
+    display: block;
+  }
+
+  .ff-submenu {
+    position: static;
+    display: none;
+  }
+
+  .ff-menu li.open > .ff-submenu {
+    display: block;
+  }
+}
+
+.ff-menu a {
+  display: block;
+  padding: 0.6em 1em;
+}
+@media (max-width: 768px) {
+  .ff-submenu.right {
+    left: 0;
+  }
+}
+
 	
   </style>
 </head>
 <body>
 <nav class="ff-topbar">
   <ul class="ff-menu">
+  
+   <li>Titelblad
+      <ul class="ff-submenu">
+        <li>Bok 1
+          <ul class="ff-submenu right">
+            <li><a href="https://svg.issuu.com/250227083225-8609e83366e368a5aa35d11f29c7cace/page_3.svg" target="_blank">Bild 1</a></li>
+            <li><a href="https://svg.issuu.com/250227083225-8609e83366e368a5aa35d11f29c7cace/page_4.svg" target="_blank">Bild 2</a></li>
+      </ul>
+      </li>
+        <li>Bok 2
+          <ul class="ff-submenu right">
+            <li><a href="https://svg.issuu.com/110309105353-5bb8cae82ee84b9c89dc9eaf91a36f97/page_2.svg" target="_blank">Bild 1</a></li>
+            <li><a href="https://svg.issuu.com/110309105353-5bb8cae82ee84b9c89dc9eaf91a36f97/page_3.svg" target="_blank">Bild 2</a></li>
+      </ul>
+      </li>
+        <li>Bok 3
+          <ul class="ff-submenu right">
+            <li><a href="https://svg.issuu.com/250220105235-3d223460fd5923d62a497165af9daa24/page_1.svg" target="_blank">Bild 1</a></li>
+            <li><a href="https://svg.issuu.com/250220105235-3d223460fd5923d62a497165af9daa24/page_2.svg" target="_blank">Bild 2</a></li>
+      </ul>
+      </li>
+        <li>Bok 4
+          <ul class="ff-submenu right">
+            <li><a href="https://svg.issuu.com/250303135426-71b4d06f88806eab4c381fe7c290a34d/page_1.svg" target="_blank">Bild 1</a></li>
+            <li><a href="https://svg.issuu.com/250303135426-71b4d06f88806eab4c381fe7c290a34d/page_2.svg" target="_blank">Bild 2</a></li>
+           </ul>
+          </li>
+        <li>Bok 5
+          <ul class="ff-submenu right">
+            <li><a href="https://issuu.com/api/content-service/public/reader/svg/963bae68386ab76860e581e89c44ee4f/3" target="_blank">Bild 1</a></li>
+            <li><a href="https://issuu.com/api/content-service/public/reader/svg/963bae68386ab76860e581e89c44ee4f/4" target="_blank">Bild 2</a></li>
+      </ul>
+      </li>
+        <li>Bok 6
+          <ul class="ff-submenu right">
+            <li><a href="https://ia600902.us.archive.org/BookReader/BookReaderImages.php?zip=/8/items/politicsofcourtl00howa/politicsofcourtl00howa_jp2.zip&file=politicsofcourtl00howa_jp2/politicsofcourtl00howa_0007.jp2&id=politicsofcourtl00howa&scale=4&rotate=0" target="_blank">Bild 1</a></li>
+            <li><a href="https://ia600902.us.archive.org/BookReader/BookReaderImages.php?zip=/8/items/politicsofcourtl00howa/politicsofcourtl00howa_jp2.zip&file=politicsofcourtl00howa_jp2/politicsofcourtl00howa_0008.jp2&id=politicsofcourtl00howa&scale=3&rotate=0" target="_blank">Bild 2</a></li>
+            <li><a href="https://ia600902.us.archive.org/BookReader/BookReaderImages.php?zip=/8/items/politicsofcourtl00howa/politicsofcourtl00howa_jp2.zip&file=politicsofcourtl00howa_jp2/politicsofcourtl00howa_0006.jp2&id=politicsofcourtl00howa&scale=3&rotate=0" target="_blank">Bild 3</a></li>
+      </ul>
+      </li>
+        <li>Bok 7
+          <ul class="ff-submenu right">
+            <li><a href="https://ia601804.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/portablequeeneli00cole_0/portablequeeneli00cole_0_jp2.zip&file=portablequeeneli00cole_0_jp2/portablequeeneli00cole_0_0007.jp2&id=portablequeeneli00cole_0&scale=4&rotate=0" target="_blank">Bild 1</a></li>
+            <li><a href="https://ia601804.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/portablequeeneli00cole_0/portablequeeneli00cole_0_jp2.zip&file=portablequeeneli00cole_0_jp2/portablequeeneli00cole_0_0008.jp2&id=portablequeeneli00cole_0&scale=3&rotate=0" target="_blank">Bild 2</a></li>
+            <li><a href="https://ia601804.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/portablequeeneli00cole_0/portablequeeneli00cole_0_jp2.zip&file=portablequeeneli00cole_0_jp2/portablequeeneli00cole_0_0006.jp2&id=portablequeeneli00cole_0&scale=3&rotate=0" target="_blank">Bild 3</a></li>
+      </ul>
+      </li>
+        <li>Bok 8
+          <ul class="ff-submenu right">
+            <li><a href="https://ia803201.us.archive.org/BookReader/BookReaderImages.php?zip=/26/items/mightyalmie00albr/mightyalmie00albr_jp2.zip&file=mightyalmie00albr_jp2/mightyalmie00albr_0007.jp2&id=mightyalmie00albr&scale=4&rotate=0" target="_blank">Bild 1</a></li>
+            <li><a href="https://ia803201.us.archive.org/BookReader/BookReaderImages.php?zip=/26/items/mightyalmie00albr/mightyalmie00albr_jp2.zip&file=mightyalmie00albr_jp2/mightyalmie00albr_0008.jp2&id=mightyalmie00albr&scale=3&rotate=0" target="_blank">Bild 2</a></li>
+      </ul>
+      </li>
+    
+        <li>Bok 9
+          <ul class="ff-submenu right">
+            <li><a href="https://ia801700.us.archive.org/BookReader/BookReaderImages.php?zip=/0/items/liarsgame00dick/liarsgame00dick_jp2.zip&file=liarsgame00dick_jp2/liarsgame00dick_0007.jp2&id=liarsgame00dick&scale=4&rotate=0" target="_blank">Bild 1</a></li>
+            <li><a href="https://ia801700.us.archive.org/BookReader/BookReaderImages.php?zip=/0/items/liarsgame00dick/liarsgame00dick_jp2.zip&file=liarsgame00dick_jp2/liarsgame00dick_0008.jp2&id=liarsgame00dick&scale=3&rotate=0" target="_blank">Bild 2</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </li>
     <li>Egenskaper
       <ul class="ff-submenu">
         <li>Agent
@@ -1072,8 +1189,6 @@ transform: translateY(10px) scale(0.98);
 
         
 
-
-</li>
     <li>
       Länkar
       <ul class="ff-submenu">
@@ -1081,7 +1196,7 @@ transform: translateY(10px) scale(0.98);
           <a href="https://libris.kb.se/katalogisering/" target="_blank">Libris</a>
         </li>
              <li>
-          <a href="   https://metadatabyran.kb.se" target="_blank">MDB</a>
+          <a href="https://metadatabyran.kb.se" target="_blank">MDB</a>
         </li>
         <li>
           <a href="https://www.rdaregistry.info" target="_blank">RDA Registry</a>
@@ -1108,7 +1223,7 @@ transform: translateY(10px) scale(0.98);
       </ul>
     </li>
   </ul>
-  </li>
+ 
 </nav>
 
 
@@ -1554,6 +1669,16 @@ document.addEventListener("click", () => {
 <div id="awesomeMessage" class="awesome-message">
   awesome dude 😎
 </div>
+<script>
+document.querySelectorAll('.ff-menu > li').forEach(item => {
+  item.addEventListener('click', function (e) {
+    if (window.innerWidth <= 768) {
+      e.stopPropagation();
+      this.classList.toggle('open');
+    }
+  });
+});
+</script>
 
 </main>
 </body>
