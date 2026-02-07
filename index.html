@@ -705,6 +705,27 @@ section.serie > fieldset.relations {
   text-decoration-color: rgba(255,255,255,0.7);
 }
 
+.awesome-message {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  margin-top: 1rem;
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.awesome-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.awesome-message {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-weight: 500;
+  color: #cbd5f5;
+}
+
 
   </style>
 </head>
@@ -962,6 +983,10 @@ section.serie > fieldset.relations {
   </fieldset>
 </section>
 
+
+
+
+
 <script>
 let agentCount = 1;
 const agentContainer = document.querySelector(".agent-container");
@@ -1045,9 +1070,6 @@ openLinks.addEventListener("click", e => {
   e.stopPropagation();
   toggleMenu(openLinks, linksMenu);
 });
-
-
-
 
 </script>
 
@@ -1217,7 +1239,30 @@ document.addEventListener("click", () => {
 });
 
 </script>
+<script>
+  document.getElementById("reviewButton").addEventListener("click", () => {
+    document.getElementById("awesomeMessage").classList.add("show");
+  });
+</script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("reviewBtn");
+    const msg = document.getElementById("awesomeMessage");
+
+    if (!btn || !msg) {
+      console.warn("Knapp eller meddelande hittades inte");
+      return;
+    }
+
+    btn.addEventListener("click", () => {
+      msg.classList.add("show");
+    });
+  });
+</script>
+<div id="awesomeMessage" class="awesome-message">
+  awesome dude 😎
+</div>
 
 </main>
 </body>
