@@ -607,10 +607,7 @@ section.serie > fieldset.relations {
   transition: background 0.15s ease, color 0.15s ease;
 }
 
-.ff-menu > li:hover {
-  background: #1e293b;
-  color: #ffffff;
-}
+
 
 /* caret */
 .ff-menu > li::after {
@@ -654,10 +651,7 @@ section.serie > fieldset.relations {
   transition: background 0.12s ease, color 0.12s ease;
 }
 
-.ff-submenu li:hover {
-  background: #1e293b;
-  color: #ffffff;
-}
+
 
 /* === LINKS SHOULD NOT LOOK LIKE LINKS === */
 
@@ -796,6 +790,184 @@ section.serie > fieldset.relations {
   font-weight: 600;
 }
 
+/* Bas: all undermenytext */
+.ff-topbar .ff-submenu li,
+.ff-topbar .ff-submenu li a {
+  color: #000000;
+  font-weight: 600;
+}
+
+
+
+/* Understrukna ord ska ALLTID följa aktuell färg */
+.ff-topbar .ff-submenu .u {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration-color: currentColor;
+}
+.ff-submenu a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.ff-topbar .ff-submenu a,
+.ff-topbar .ff-submenu a:visited {
+  color: #000000;
+}
+/* =========================
+   ENHETLIG MENYLOGIK
+   ========================= */
+
+/* Bas: all text i undermenyer */
+.ff-topbar .ff-submenu li {
+  color: #000;
+  font-weight: 600;
+}
+
+/* Hover: hela raden blir vit */
+.ff-topbar .ff-submenu li:hover {
+  color: #fff;
+}
+
+/* Länkar följer alltid sin rad */
+.ff-topbar .ff-submenu li a {
+  color: inherit;
+  font-weight: inherit;
+}
+
+/* Understrukna ord (Relationer) */
+.ff-topbar .ff-submenu .u {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+}
+
+/* Hover även för spans */
+.ff-topbar .ff-submenu li:hover .u {
+  color: inherit;
+}
+/* Hover-bakgrund för undermenyer */
+.ff-topbar .ff-submenu li:hover {
+  background-color: #020617; /* mörk bakgrund */
+}
+
+.ff-topbar .ff-submenu li {
+  padding: 0.5rem 0.75rem;
+}
+/* Grund */
+.ff-topbar .ff-submenu li {
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+/* Hover */
+.ff-topbar .ff-submenu li:hover {
+  transform: translateX(4px);
+}
+.ff-submenu .u {
+  position: relative;
+  text-decoration: none;
+}
+
+.ff-submenu .u::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1.5px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.ff-submenu li:hover .u::after {
+  transform: scaleX(1);
+}
+.ff-submenu {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+}
+.ff-submenu li:hover {
+  box-shadow: inset 3px 0 0 #38bdf8;
+}
+.ff-submenu li {
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+/* Utgångsläge */
+.ff-menu > li > .ff-submenu {
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
+}
+
+/* När huvudmenyn hovras */
+.ff-menu > li:hover > .ff-submenu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+transform: translateY(10px) scale(0.98);
+
+.ff-submenu li + li {
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+.ff-submenu li {
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.ff-submenu li:hover {
+  transform: translateX(4px);
+}
+.ff-submenu li:hover {
+  text-shadow: 0 0 6px rgba(255,255,255,0.35);
+}
+.ff-submenu li:hover {
+  letter-spacing: 0.02em;
+}
+.ff-submenu li:hover {
+  background-image: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.08),
+    transparent
+  );
+}
+.ff-submenu li {
+  position: relative;
+}
+
+.ff-submenu li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 8px;
+  height: 100%;
+  background: #00B7FF;
+  opacity: 0;
+  transition: opacity 0.30s ease;
+}
+
+.ff-submenu li:hover::before {
+  opacity: 1;
+}
+.ff-submenu li:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.35),
+    transparent 20	%
+  );
+}
+
+}
+	
   </style>
 </head>
 <body>
