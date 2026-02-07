@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
 
   <title>Mall</title>
   
@@ -1020,6 +1021,81 @@ transform: translateY(10px) scale(0.98);
     left: 0;
   }
 }
+.ff-submenu li {
+  margin: 0;
+  padding: 0;
+}
+
+.ff-submenu a,
+.ff-submenu li {
+  display: block;
+  padding: 6px 12px;
+  line-height: 1.3;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+
+  .ff-submenu li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .ff-submenu a,
+  .ff-submenu li {
+    display: block;
+    padding: 6px 12px;
+    line-height: 1.3;
+    box-sizing: border-box;
+  }
+
+}
+.ff-submenu li {
+  padding: 6px 12px;
+  line-height: 1.3;
+  box-sizing: border-box;
+}
+.ff-submenu a,
+.ff-submenu span {
+  line-height: inherit;
+}
+.ff-submenu li {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  box-sizing: border-box;
+}
+.ff-submenu li > * {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+}
+.ff-submenu a {
+  display: inline;
+  text-decoration: none;
+  color: inherit;
+}
+.ff-submenu a {
+  color: #1a4fb3;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(26,79,179,0.4);
+}
+
+.ff-submenu a:hover,
+.ff-submenu a:focus-visible {
+  border-bottom-style: solid;
+}
+.ff-submenu a {
+  color: #1a4fb3;          /* klassisk länkblå, kan justeras */
+  text-decoration: none;
+  font-weight: 500;
+}
+.ff-submenu a {
+  text-decoration: none;
+  box-shadow: inset 0 -2px 0 0 currentColor;
+}
+.u {
+  margin-right: 0.4em;
+}
 
 	
   </style>
@@ -1102,8 +1178,8 @@ transform: translateY(10px) scale(0.98);
         </li>
         <li>Manifestation
           <ul class="ff-submenu right">
-            <li><a href="https://metadatabyran.kb.se/generella-anvisningar---rda/manifestation-instans/egenskaper-som-beskriver-en-manifestation/barartyp?searchTerm=B%C3%A4rartyp" target="_blank">Bärartyp</a></li>
-            <li><a href="https://metadatabyran.kb.se/generella-anvisningar---rda/manifestation-instans/egenskaper-som-beskriver-en-manifestation/copyrightar?searchTerm=Copyright%C3%A5r" target="_blank">Copyrightår</a></li>
+            <li><a href="https://metadatabyran.kb.se/generella-anvisningar---rda/manifestation-instans/egenskaper-som-beskriver-en-manifestation/barartyp" target="_blank">Bärartyp</a></li>
+            <li><a href="https://metadatabyran.kb.se/generella-anvisningar---rda/manifestation-instans/egenskaper-som-beskriver-en-manifestation/copyrightar" target="_blank">Copyrightår</a></li>
             <li><a href="https://metadatabyran.kb.se/generella-anvisningar---rda/manifestation-instans/egenskaper-som-beskriver-en-manifestation/titel" target="_blank">Huvudtitel</a></li>
             <li><a href="https://metadatabyran.kb.se/generella-anvisningar---rda/manifestation-instans/egenskaper-som-beskriver-en-manifestation/identifikator-for-manifestationen" target="_blank">Identifikator</a></li>
             <li><a href="https://metadatabyran.kb.se/generella-anvisningar---rda/manifestation-instans/egenskaper-som-beskriver-en-manifestation/serieuppgift#h-SeriesISSN" target="_blank">ISSN</a></li>
@@ -1148,39 +1224,39 @@ transform: translateY(10px) scale(0.98);
 
     <li>Agent
       <ul class="ff-submenu right">
-        <li>– <span class="u">är skapare av</span> VerkX</li>
-        <li>– <span class="u">är bidragsgivare till</span> UttryckX</li>
+        <li>– <span class="u">är skapare av</span>&nbsp;VerkX</li>
+        <li>– <span class="u">är bidragsgivare till</span>&nbsp;UttryckX</li>
       </ul>
     </li>
 
     <li>Manifestation
       <ul class="ff-submenu right">
-        <li>– <span class="u">gestaltar</span> VerkX</li>
-        <li>– <span class="u">gestaltar</span> UttryckX</li>
-        <li>– <span class="u">är en del av</span> SerieX</li>
+        <li>– <span class="u">gestaltar</span>&nbsp;VerkX</li>
+        <li>– <span class="u">gestaltar</span>&nbsp;UttryckX</li>
+        <li>– <span class="u">är en del av</span>&nbsp;SerieX</li>
       </ul>
     </li>
 
     <li>Serie
       <ul class="ff-submenu right">
-        <li>– <span class="u">inkluderar</span> ManifestationX</li>
+        <li>– <span class="u">inkluderar</span>&nbsp;ManifestationX</li>
       </ul>
     </li>
 
     <li>Uttryck
       <ul class="ff-submenu right">
-        <li>– <span class="u">är bidraget av</span> AgentX</li>
-        <li>– <span class="u">förverkligar</span> VerkX</li>
-        <li>– <span class="u">gestaltas av</span> ManifestationX</li>
+        <li>– <span class="u">är bidraget av</span>&nbsp;AgentX</li>
+        <li>– <span class="u">förverkligar</span>&nbsp;VerkX</li>
+        <li>– <span class="u">gestaltas av</span>&nbsp;ManifestationX</li>
       </ul>
     </li>
 
     <li>Verk
       <ul class="ff-submenu right">
-        <li>– <span class="u">är skapat av</span> AgentX</li>
-        <li>– <span class="u">förverkligas av</span> UttryckX</li>
-        <li>– <span class="u">ingår i</span> SerieX</li>
-        <li>– <span class="u">gestaltas av</span> ManifestationX</li>
+        <li>– <span class="u">är skapat av</span>&nbsp;AgentX</li>
+        <li>– <span class="u">förverkligas av</span>&nbsp;UttryckX</li>
+        <li>– <span class="u">ingår i</span>&nbsp;SerieX</li>
+        <li>– <span class="u">gestaltas av</span>&nbsp;ManifestationX</li>
       </ul>
     </li>
 
